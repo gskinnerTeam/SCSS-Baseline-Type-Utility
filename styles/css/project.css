@@ -1,0 +1,154 @@
+/*! Sass-Type-Baseline-Grid-Utility | MIT License | github.com/gskinnerTeam/SCSS-Baseline-Type-Utility */
+h4,
+.font-default, h3,
+.font-large, h2,
+.font-larger, h1,
+.font-largest, h6,
+.font-smallest, p,
+.font-smaller, h5,
+.font-small {
+  margin: 0;
+}
+
+h4,
+.font-default, h3,
+.font-large, h2,
+.font-larger, h1,
+.font-largest {
+  font-family: "Bree Serif", serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h6,
+.font-smallest, p,
+.font-smaller, h5,
+.font-small {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h6,
+.font-smallest {
+  padding: 0.8rem 0 1.5rem;
+  line-height: 2.3rem;
+  font-size: 1.1rem;
+}
+
+p,
+.font-smaller {
+  padding: 0.7rem 0 1.6rem;
+  line-height: 2.3rem;
+  font-size: 1.5rem;
+}
+
+h5,
+.font-small {
+  padding: 0.5rem 0 1.8rem;
+  line-height: 2.3rem;
+  font-size: 2.1rem;
+}
+
+h4,
+.font-default {
+  padding: 1.2rem 0 1.1rem;
+  line-height: 4.6rem;
+  font-size: 2.9rem;
+}
+
+h3,
+.font-large {
+  padding: 0.8rem 0 1.5rem;
+  line-height: 4.6rem;
+  font-size: 4.1rem;
+}
+
+h2,
+.font-larger {
+  padding: 1.3rem 0 3.3rem;
+  line-height: 6.9rem;
+  font-size: 5.8rem;
+}
+
+h1,
+.font-largest {
+  padding: 1.6rem 0 3rem;
+  line-height: 9.2rem;
+  font-size: 8.1rem;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  box-shadow: 0 1px 0 magenta;
+}
+
+.layout-1, .layout-2, .layout-3, .layout-4, .layout-5, .layout-6, .layout-7 {
+  background-color: rgba(255, 0, 255, 0.5);
+  margin: 2.3rem 0;
+}
+
+.layout-1 {
+  height: 1.2rem;
+  margin-top: 1.1rem;
+  width: 1.2rem;
+}
+
+.layout-2 {
+  height: 2.3rem;
+  width: 2.3rem;
+}
+
+.layout-3 {
+  height: 4.6rem;
+  width: 4.6rem;
+}
+
+.layout-4 {
+  height: 6.9rem;
+  width: 6.9rem;
+}
+
+.layout-5 {
+  height: 9.2rem;
+  width: 9.2rem;
+}
+
+.layout-6 {
+  height: 13.8rem;
+  width: 13.8rem;
+}
+
+.layout-7 {
+  height: 18.4rem;
+  width: 18.4rem;
+}
+
+#baseline {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#baseline hr {
+  border-width: 0;
+  border-top: 0.1rem solid lightgrey;
+  height: 2.2rem;
+  width: 100%;
+  margin: 0;
+}
+
+.col2 {
+  float: left;
+  width: 50%;
+}

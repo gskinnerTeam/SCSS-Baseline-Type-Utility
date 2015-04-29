@@ -1,0 +1,84 @@
+/*! Sass-Type-Baseline-Grid-Utility | MIT License | github.com/gskinnerTeam/SCSS-Baseline-Type-Utility */
+
+//*******************************************
+//
+//	BASELINE UTILITY
+//
+//	- Automatically create a custom baseline grid
+//	aligned with the visible baseline of each font
+//
+//	Contents
+//	1) DECIMAL ROUNDING
+//	2) BASELINE GRID
+//	3) BASELINE FONT
+//
+//*******************************************
+
+
+
+//*******************************************
+//
+//	DECIMAL ROUNDING
+//
+//*******************************************
+@function decimalRound( $number, $decimals: 1 ) {
+	$n: 1;
+	@for $i from 1 through $decimals {
+		$n: $n * 10;
+	}
+	@return round($number * $n) / $n;
+}
+
+
+
+//*******************************************
+//
+//	BASELINE GRID
+//
+//*******************************************
+@function baselineGrid( $size: 1, $baseline: $baseline ) {
+	@return decimalRound( $size * $baseline );
+}
+
+
+
+//*******************************************
+//
+//	BASELINE FONT
+//
+//*******************************************
+@mixin baselineFont(
+	$size:			$fontSize-base,		// A unitless value to determine the size ramp ratio increment used
+	$shiftRatio: 	0.25,				// Custom for each font to determine it's baseline location
+	$baseline: 		$baseline, 			// Should be specified as a global variable
+	$ratio: 		$ratio				// Should be specified as a global variable
+) {
+
+	// Remove excess decimal places
+	$b: decimalRound($baseline);
+
+	// Calculate font size based on given ratio increment
+	$r: $ratio;
+	@if $size > 1 {
+		@for $i from 2 through $size {
+			$r: ($r * $ratio);
+		}
+	}
+	@if $size < 1 {
+		@for $i from 0 through -$size {
+			$r: ($r / $ratio);
+		}
+	}
+
+	// Align to Grid
+	$size: 			$fontSize-base * $r;
+	$lineHeight: 	ceil($size / $b) * $b;
+	$shift: 		decimalRound(($lineHeight / 2) - ($size * $shiftRatio));
+	$shift-offset: 	decimalRound((ceil($size / $b / $b) * $b) - $shift);
+
+	// Output
+	padding: 		$shift 0 $shift-offset;
+	line-height: 	decimalRound($lineHeight);
+	font-size: 		decimalRound($size);
+
+}

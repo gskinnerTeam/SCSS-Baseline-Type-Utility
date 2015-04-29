@@ -1,0 +1,92 @@
+//*******************************************
+//
+//	DEMO STYLES
+//	- Styles used for demonstration purposes.
+//	- Create the background grid to see the effect of the utility
+//
+//	1) CONTENT
+//	2) GRID
+//
+//*******************************************
+
+
+
+//*******************************************
+//
+//	CONTENT
+//
+//*******************************************
+html {font-size: $fontSize-root;}
+body {
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p { box-shadow: 0 1px 0 rgb(255,0,255); }
+%layout {
+	background-color: rgba(255,0,255,0.5);
+	margin: $baseline 0;
+}
+.layout-1 {
+	@extend %layout;
+	height: $gridUnit-smallest;
+	margin-top: $baseline - $gridUnit-smallest;
+	width: $gridUnit-smallest;
+}
+.layout-2 {
+	@extend %layout;
+	height: $gridUnit-smaller;
+	width: $gridUnit-smaller;
+}
+.layout-3 {
+	@extend %layout;
+	height: $gridUnit-small;
+	width: $gridUnit-small;
+}
+.layout-4 {
+	@extend %layout;
+	height: $gridUnit-default;
+	width: $gridUnit-default;
+}
+.layout-5 {
+	@extend %layout;
+	height: $gridUnit-large;
+	width: $gridUnit-large;
+}
+.layout-6 {
+	@extend %layout;
+	height: $gridUnit-larger;
+	width: $gridUnit-larger;
+}
+.layout-7 {
+	@extend %layout;
+	height: $gridUnit-largest;
+	width: $gridUnit-largest;
+}
+
+
+
+//*******************************************
+//
+//	GRID
+//
+//*******************************************
+#baseline {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	hr {
+		border-width: 0;
+		border-top: 0.1rem solid lightgrey;
+		height: $gridUnit-smaller - 0.1rem;
+		width: 100%;
+		margin: 0;
+	}
+}
+
+.col2 {
+	float: left;
+	width: 50%;
+}
