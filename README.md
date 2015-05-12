@@ -11,7 +11,7 @@ Automatically calculated font sizes and spacing based on a customizable ratio an
 - Unit height
 - Scale ratio
 
-These are the main settings to set up your grid. They can be adjusted at any time.
+_These are the main settings to set up your grid. They can be adjusted at any time._
 
 
 ```scss
@@ -47,7 +47,7 @@ In order to align type to its visible baseline, the baseline position needs to b
 //
 // SHIFT RATIO
 // - (unitless)
-// - Different for each fon
+// - Different for each font
 // - This value describes the location of the font's baseline as a percentage
 // - Using an accurate value for each font is essential to proper alignment
 //
@@ -73,7 +73,7 @@ $shiftRatio-secondary: 0.32;
 
 
 ### Pick your size increments
-These values specify which ratio increments you plan on using. This way, you aren’t required to use consecutive intervals in the ratio. Layout settings can be applied to sizing and spacing properties throughout the project to keep containers aligned with the baseline grid as well.
+These values specify which ratio increments you plan on using. This way, you are not required to use consecutive intervals in the ratio. Layout settings can be applied to sizing and spacing properties throughout the project to keep containers aligned with the baseline grid as well.
 
 
 ```scss
@@ -110,7 +110,7 @@ $gridUnit-largest:  baselineGrid(8);
 
 
 ### Create the output
-Create your selectors, extend your font families, and select your font-size settings and shift ratio variables. These settings can be extended throughout the project, ensuring consistency and the ability to update preferences easily. Vertical spacing can be fine-tuned by adding or subtracting the <strong>$baseline</strong> using the top or bottom margin.
+Create your selectors, extend your font families, and select your font-size settings and shift ratio variables. These settings can be extended throughout the project, ensuring consistency and the ability to update preferences easily. Vertical spacing can be fine-tuned by adding or subtracting the **$baseline** using the top or bottom margin.
 
 
 ```scss
