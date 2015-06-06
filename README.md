@@ -141,7 +141,7 @@ What you get is easily accessible presets to use throughout the project. They in
 
 
 ![alt tag](assets/baseline-result.gif)
-_The baseline utility, as used on the next [CreateJS.com](http://createjs.com) update._
+_The baseline utility, as used on [CreateJS.com](http://createjs.com)._
 
 
 If you found this tool useful or interesting I would be happy to hear from you via [@travismillerdes](https://twitter.com/travismillerdes) on twitter.
